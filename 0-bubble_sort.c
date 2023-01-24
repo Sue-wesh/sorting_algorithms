@@ -2,11 +2,10 @@
 #include "sort.h"
 
 /**
- * swap - funnction two swap two integers in an array
+ * swap - function to swap two integers in an array
  * @a: first integer to swap
  * @b: second element to swap
  */
-
 void swap(int *a, int *b)
 {
 	int tmp;
@@ -21,10 +20,9 @@ void swap(int *a, int *b)
  * @array: array that is to be sorted
  * @size: the size of the array
  */
-
 void bubble_sort(int *array, size_t size)
 {
-	size_t i;
+	size_t i, len = size;
 	bool check = false;
 
 	if (array == NULL || size < 2)
@@ -33,7 +31,7 @@ void bubble_sort(int *array, size_t size)
 	while (check == false)
 	{
 		check = true;
-		for (i = 0; i < (size - 1); i++)
+		for (i = 0; i < len - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
@@ -42,6 +40,6 @@ void bubble_sort(int *array, size_t size)
 				check = false;
 			}
 		}
-		size--;
+		len--;
 	}
 }
