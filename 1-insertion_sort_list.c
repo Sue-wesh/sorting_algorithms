@@ -22,7 +22,7 @@ void swapNodes(listint_t **h, listint_t **a, listint_t *b)
 }
 
 /**
- * insertion_sort_list - sort doubly linked list in ascending order 
+ * insertion_sort_list - sort doubly linked list in ascending order
  * using insertion sort
  * @list: pointer to the head of a doubly linked list
  */
@@ -36,7 +36,7 @@ void insertion_sort_list(listint_t **list)
 	{
 		tmp = second->next;
 		first = second->prev;
-		while(first != NULL && second->n < first->n)
+		while (first != NULL && second->n < first->n)
 		{
 			swapNodes(list, &first, second);
 			print_list((const listint_t *)*list);
